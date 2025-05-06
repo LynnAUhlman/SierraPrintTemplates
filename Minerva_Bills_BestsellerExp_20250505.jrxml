@@ -1,0 +1,793 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.21.2.final using JasperReports Library version 6.21.2-8434a0bd7c3bbc37cbf916f2968d35e4b165821a  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Bills" pageWidth="612" pageHeight="792" columnWidth="572" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" isFloatColumnFooter="true" uuid="ace28201-8cd8-4c56-aa0f-6efaab1a3ea7">
+	<property name="ireport.scriptlethandling" value="0"/>
+	<property name="ireport.encoding" value="UTF-8"/>
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<import value="net.sf.jasperreports.engine.*"/>
+	<import value="java.util.*"/>
+	<import value="net.sf.jasperreports.engine.data.*"/>
+	<field name="Item_Title" class="java.lang.String">
+		<fieldDescription><![CDATA[v_b_title]]></fieldDescription>
+	</field>
+	<field name="Item_Author" class="java.lang.String">
+		<fieldDescription><![CDATA[v_b_author]]></fieldDescription>
+	</field>
+	<field name="Item_Publisher" class="java.lang.String">
+		<fieldDescription><![CDATA[v_b_pub]]></fieldDescription>
+	</field>
+	<field name="Item_Bib_Record_Id" class="java.lang.String">
+		<fieldDescription><![CDATA[bib_recid]]></fieldDescription>
+	</field>
+	<field name="Item_Edition" class="java.lang.String">
+		<fieldDescription><![CDATA[v_b_edition]]></fieldDescription>
+	</field>
+	<field name="Library_Address_Line1_C" class="java.lang.String">
+		<fieldDescription><![CDATA[/notices/common/g_return_addr1]]></fieldDescription>
+	</field>
+	<field name="Library_Address_Line2_C" class="java.lang.String">
+		<fieldDescription><![CDATA[/notices/common/g_return_addr2]]></fieldDescription>
+	</field>
+	<field name="Library_Address_Line3_C" class="java.lang.String">
+		<fieldDescription><![CDATA[/notices/common/g_return_addr3]]></fieldDescription>
+	</field>
+	<field name="Library_Address_Line4_C" class="java.lang.String">
+		<fieldDescription><![CDATA[/notices/common/g_return_addr4]]></fieldDescription>
+	</field>
+	<field name="Item_Barcode" class="java.lang.String">
+		<fieldDescription><![CDATA[v_i_barcode]]></fieldDescription>
+	</field>
+	<field name="Item_Due_Date" class="java.lang.String">
+		<fieldDescription><![CDATA[f_i_duedate]]></fieldDescription>
+	</field>
+	<field name="Item_Location" class="java.lang.String">
+		<fieldDescription><![CDATA[f_i_location]]></fieldDescription>
+	</field>
+	<field name="Item_Call_Number" class="java.lang.String">
+		<fieldDescription><![CDATA[v_call_num]]></fieldDescription>
+	</field>
+	<field name="Item_ID" class="java.lang.String">
+		<fieldDescription><![CDATA[@id]]></fieldDescription>
+	</field>
+	<field name="Item_Checked_Out_Date" class="java.lang.String">
+		<fieldDescription><![CDATA[f_i_checkout_date]]></fieldDescription>
+	</field>
+	<field name="Text_Number_C" class="java.lang.String">
+		<fieldDescription><![CDATA[/notices/common/g_msg_num]]></fieldDescription>
+	</field>
+	<field name="Item_Record_Id" class="java.lang.String">
+		<fieldDescription><![CDATA[item_recid]]></fieldDescription>
+	</field>
+	<field name="Item_Location_C" class="java.lang.String">
+		<fieldDescription><![CDATA[/notices/common/f_i_location]]></fieldDescription>
+	</field>
+	<field name="Item_Checked_Out_Location" class="java.lang.String">
+		<fieldDescription><![CDATA[f_i_outloc]]></fieldDescription>
+	</field>
+	<field name="Item_Volume" class="java.lang.String">
+		<fieldDescription><![CDATA[v_vol]]></fieldDescription>
+	</field>
+	<field name="Item_Code1" class="java.lang.String">
+		<fieldDescription><![CDATA[f_i_scat]]></fieldDescription>
+	</field>
+	<field name="Item_Code2" class="java.lang.String">
+		<fieldDescription><![CDATA[f_i_icode]]></fieldDescription>
+	</field>
+	<field name="Item_Type" class="java.lang.String">
+		<fieldDescription><![CDATA[f_i_i_type]]></fieldDescription>
+	</field>
+	<field name="Item_Material_Type" class="java.lang.String">
+		<fieldDescription><![CDATA[f_b_bcode2]]></fieldDescription>
+	</field>
+	<field name="Item_OPAC_Message" class="java.lang.String">
+		<fieldDescription><![CDATA[f_i_opacmsg]]></fieldDescription>
+	</field>
+	<field name="Item_Agency" class="java.lang.String">
+		<fieldDescription><![CDATA[f_i_agency]]></fieldDescription>
+	</field>
+	<field name="Item_Note" class="java.lang.String">
+		<fieldDescription><![CDATA[v_i_note]]></fieldDescription>
+	</field>
+	<field name="Item_Message" class="java.lang.String">
+		<fieldDescription><![CDATA[f_i_message]]></fieldDescription>
+	</field>
+	<field name="Item_Total_Checkout" class="java.lang.String">
+		<fieldDescription><![CDATA[f_i_out_stat]]></fieldDescription>
+	</field>
+	<field name="Item_Last_Checkin" class="java.lang.String">
+		<fieldDescription><![CDATA[f_i_lchkin]]></fieldDescription>
+	</field>
+	<field name="Item_In_Location" class="java.lang.String">
+		<fieldDescription><![CDATA[f_i_inloc]]></fieldDescription>
+	</field>
+	<field name="Print_Sequence_C" class="java.lang.String">
+		<fieldDescription><![CDATA[/notices/common/print_sequence]]></fieldDescription>
+	</field>
+	<field name="Message_C" class="java.lang.String">
+		<fieldDescription><![CDATA[/notices/common/g_msg]]></fieldDescription>
+	</field>
+	<field name="Patron_Name_C" class="java.lang.String">
+		<fieldDescription><![CDATA[/notices/common/v_p_name]]></fieldDescription>
+	</field>
+	<field name="Patron_Address_Line1_C" class="java.lang.String">
+		<fieldDescription><![CDATA[/notices/common/g_patron_addr1]]></fieldDescription>
+	</field>
+	<field name="Patron_Address_Line2_C" class="java.lang.String">
+		<fieldDescription><![CDATA[/notices/common/g_patron_addr2]]></fieldDescription>
+	</field>
+	<field name="Patron_Address_Line3_C" class="java.lang.String">
+		<fieldDescription><![CDATA[/notices/common/g_patron_addr3]]></fieldDescription>
+	</field>
+	<field name="Patron_Address_Line4_C" class="java.lang.String">
+		<fieldDescription><![CDATA[/notices/common/g_patron_addr4]]></fieldDescription>
+	</field>
+	<field name="Patron_Name" class="java.lang.String">
+		<fieldDescription><![CDATA[v_p_name]]></fieldDescription>
+	</field>
+	<field name="Patron_Type" class="java.lang.String">
+		<fieldDescription><![CDATA[f_p_ptype]]></fieldDescription>
+	</field>
+	<field name="Patron_Phone_Number" class="java.lang.String">
+		<fieldDescription><![CDATA[v_p_phone]]></fieldDescription>
+	</field>
+	<field name="Patron_Phone_Number_C" class="java.lang.String">
+		<fieldDescription><![CDATA[/notices/common/v_p_phone]]></fieldDescription>
+	</field>
+	<field name="Patron_Record_ID_C" class="java.lang.String">
+		<fieldDescription><![CDATA[/notices/common/patron_recid]]></fieldDescription>
+	</field>
+	<field name="Patron_Phone2_Number_C" class="java.lang.String">
+		<fieldDescription><![CDATA[/notices/common/v_p_phone2]]></fieldDescription>
+	</field>
+	<field name="Patron_Phone2_Number" class="java.lang.String">
+		<fieldDescription><![CDATA[v_p_phone2]]></fieldDescription>
+	</field>
+	<field name="Patron_Barcode_C" class="java.lang.String">
+		<fieldDescription><![CDATA[/notices/common/v_p_barcode]]></fieldDescription>
+	</field>
+	<field name="Patron_Barcode" class="java.lang.String">
+		<fieldDescription><![CDATA[v_p_barcode]]></fieldDescription>
+	</field>
+	<field name="Patron_Code1_C" class="java.lang.String">
+		<fieldDescription><![CDATA[/notices/common/f_p_pcode1]]></fieldDescription>
+	</field>
+	<field name="Patron_Code2_C" class="java.lang.String">
+		<fieldDescription><![CDATA[/notices/common/f_p_pcode2]]></fieldDescription>
+	</field>
+	<field name="Patron_Code3_C" class="java.lang.String">
+		<fieldDescription><![CDATA[/notices/common/f_p_pcode3]]></fieldDescription>
+	</field>
+	<field name="Patron_Code4_C" class="java.lang.String">
+		<fieldDescription><![CDATA[/notices/common/f_p_pcode4]]></fieldDescription>
+	</field>
+	<field name="Patron_Message_C" class="java.lang.String">
+		<fieldDescription><![CDATA[/notices/common/v_p_msg]]></fieldDescription>
+	</field>
+	<field name="Patron_Agency_C" class="java.lang.String">
+		<fieldDescription><![CDATA[/notices/common/f_p_agency]]></fieldDescription>
+	</field>
+	<field name="Patron_Home_Library_C" class="java.lang.String">
+		<fieldDescription><![CDATA[/notices/common/v_p_home_lib]]></fieldDescription>
+	</field>
+	<field name="Patron_Checked_Out_Number_C" class="java.lang.String">
+		<fieldDescription><![CDATA[/notices/common/f_p_cur_chkout]]></fieldDescription>
+	</field>
+	<field name="Patron_Type_C" class="java.lang.String">
+		<fieldDescription><![CDATA[/notices/common/f_p_ptype]]></fieldDescription>
+	</field>
+	<field name="Patron_Address_Line1" class="java.lang.String">
+		<fieldDescription><![CDATA[g_patron_addr1]]></fieldDescription>
+	</field>
+	<field name="Patron_Address_Line2" class="java.lang.String">
+		<fieldDescription><![CDATA[g_patron_addr2]]></fieldDescription>
+	</field>
+	<field name="Patron_Address_Line3" class="java.lang.String">
+		<fieldDescription><![CDATA[g_patron_addr3]]></fieldDescription>
+	</field>
+	<field name="Patron_Address_Line4" class="java.lang.String">
+		<fieldDescription><![CDATA[g_patron_addr4]]></fieldDescription>
+	</field>
+	<field name="Patron_Code1" class="java.lang.String">
+		<fieldDescription><![CDATA[f_p_pcode1]]></fieldDescription>
+	</field>
+	<field name="Patron_Code2" class="java.lang.String">
+		<fieldDescription><![CDATA[f_p_pcode2]]></fieldDescription>
+	</field>
+	<field name="Patron_Code3" class="java.lang.String">
+		<fieldDescription><![CDATA[f_p_pcode3]]></fieldDescription>
+	</field>
+	<field name="Patron_Code4" class="java.lang.String">
+		<fieldDescription><![CDATA[f_p_pcode4]]></fieldDescription>
+	</field>
+	<field name="Patron_Home_Library" class="java.lang.String">
+		<fieldDescription><![CDATA[v_p_home_lib]]></fieldDescription>
+	</field>
+	<field name="Patron_Record_ID" class="java.lang.String">
+		<fieldDescription><![CDATA[patron_recid]]></fieldDescription>
+	</field>
+	<field name="Patron_Message" class="java.lang.String">
+		<fieldDescription><![CDATA[v_p_msg]]></fieldDescription>
+	</field>
+	<field name="Patron_Agency" class="java.lang.String">
+		<fieldDescription><![CDATA[f_p_agency]]></fieldDescription>
+	</field>
+	<field name="Patron_Checked_Out_Number" class="java.lang.String">
+		<fieldDescription><![CDATA[f_p_cur_chkout]]></fieldDescription>
+	</field>
+	<field name="Item_Publish_Date" class="java.lang.String">
+		<fieldDescription><![CDATA[v_b_pub_date]]></fieldDescription>
+	</field>
+	<field name="Bill_Total_Patron_Fines_C" class="java.lang.String">
+		<fieldDescription><![CDATA[/notices/common/f_p_moneyowed]]></fieldDescription>
+	</field>
+	<field name="Bill_GST_Charge" class="java.lang.String">
+		<fieldDescription><![CDATA[v_bill_gst]]></fieldDescription>
+	</field>
+	<field name="Bill_Processing_Fee" class="java.lang.String">
+		<fieldDescription><![CDATA[v_bill_proc_fee]]></fieldDescription>
+	</field>
+	<field name="Bill_Billing_Fee" class="java.lang.String">
+		<fieldDescription><![CDATA[v_bill_billing_fee]]></fieldDescription>
+	</field>
+	<field name="Bill_Original_Patron_Name" class="java.lang.String">
+		<fieldDescription><![CDATA[v_bill_org_patron_name]]></fieldDescription>
+	</field>
+	<field name="Bill_Rental_Charge" class="java.lang.String">
+		<fieldDescription><![CDATA[v_bill_rental_charge]]></fieldDescription>
+	</field>
+	<field name="Bill_Overdue_Charge" class="java.lang.String">
+		<fieldDescription><![CDATA[v_bill_overdue_charge]]></fieldDescription>
+	</field>
+	<field name="Bill_Item_Charge" class="java.lang.String">
+		<fieldDescription><![CDATA[v_bill_item_charge]]></fieldDescription>
+	</field>
+	<field name="Bill_Lost_Charge" class="java.lang.String">
+		<fieldDescription><![CDATA[v_bill_lost_charge]]></fieldDescription>
+	</field>
+	<field name="Bill_Total_Org_C" class="java.lang.String">
+		<fieldDescription><![CDATA[/notices/common/v_bill_tot_ogr]]></fieldDescription>
+	</field>
+	<field name="Bill_Amount_Paid" class="java.lang.String">
+		<fieldDescription><![CDATA[v_bill_amt_paid]]></fieldDescription>
+	</field>
+	<field name="Bill_Item_Title" class="java.lang.String">
+		<fieldDescription><![CDATA[v_bill_item_title]]></fieldDescription>
+	</field>
+	<field name="Bill_Desc" class="java.lang.String">
+		<fieldDescription><![CDATA[v_bill_desc]]></fieldDescription>
+	</field>
+	<field name="Bill_Charge_Type" class="java.lang.String">
+		<fieldDescription><![CDATA[v_bill_charge_type]]></fieldDescription>
+	</field>
+	<field name="Bill_Amount_Due" class="java.lang.String">
+		<fieldDescription><![CDATA[s_bill_amt_due]]></fieldDescription>
+	</field>
+	<field name="Bill_Location" class="java.lang.String">
+		<fieldDescription><![CDATA[v_bill_loc]]></fieldDescription>
+	</field>
+	<field name="Bill_Total_Amount_C" class="java.lang.String">
+		<fieldDescription><![CDATA[/notices/common/v_bill_tot_amt]]></fieldDescription>
+	</field>
+	<field name="Bill_Invoice" class="java.lang.String">
+		<fieldDescription><![CDATA[v_bill_invoice]]></fieldDescription>
+	</field>
+	<field name="Bill_Total_Amount" class="java.lang.String">
+		<fieldDescription><![CDATA[v_bill_tot_amt]]></fieldDescription>
+	</field>
+	<field name="Bill_Item_Checked_Out_Date" class="java.lang.String">
+		<fieldDescription><![CDATA[v_bill_date_checkedout]]></fieldDescription>
+	</field>
+	<field name="Bill_Item_Date_Due" class="java.lang.String">
+		<fieldDescription><![CDATA[v_bill_date_due]]></fieldDescription>
+	</field>
+	<field name="Bill_Item_Returned_Date" class="java.lang.String">
+		<fieldDescription><![CDATA[v_bill_ret_date]]></fieldDescription>
+	</field>
+	<field name="Bill_Amount" class="java.lang.String">
+		<fieldDescription><![CDATA[v_bill_amt]]></fieldDescription>
+	</field>
+	<field name="Message_Patron" class="java.lang.String">
+		<fieldDescription><![CDATA[s_msg_patron]]></fieldDescription>
+	</field>
+	<field name="Message_Patron_C" class="java.lang.String">
+		<fieldDescription><![CDATA[/notices/common/s_msg_patron]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Prevent"/>
+	</background>
+	<title>
+		<band height="288" splitType="Stretch">
+			<textField pattern="" isBlankWhenNull="true">
+				<reportElement key="textField-2" x="65" y="111" width="278" height="16" uuid="ab57ccfa-3212-4340-bea0-ca55520b138a"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Patron_Name_C}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-6" x="65" y="127" width="278" height="16" uuid="5081647c-7f3f-44a6-8fee-795c753e796f"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Patron_Address_Line1_C}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-7" x="65" y="143" width="278" height="16" uuid="758e68a2-9d9d-4539-a96f-2be5de72dd9f"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Patron_Address_Line2_C}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-8" x="65" y="159" width="278" height="16" uuid="de99e426-2a21-4f90-81c8-10a4ecd91ae7"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Patron_Address_Line3_C}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-24" x="65" y="27" width="237" height="13" uuid="1d2fdea2-dcac-4ee7-9569-c4c8718c1f8b"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Library_Address_Line1_C}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-25" x="65" y="40" width="237" height="13" uuid="67b185be-c411-4b46-816e-f4e1c40fb703"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Library_Address_Line2_C}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-26" x="65" y="53" width="237" height="13" uuid="8282f591-ca19-4563-ac02-a5fe6c77f7a2"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Library_Address_Line3_C}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-45" x="65" y="190" width="433" height="90" uuid="672d6a7f-2a12-46eb-935b-5d22cbb6d4dd"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Message_C}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-23" x="331" y="17" width="209" height="38" uuid="2f713442-1306-41bb-94df-97c0b01817ff"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="18" isBold="false" isUnderline="false" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[Billing Notice]]></text>
+			</staticText>
+			<textField evaluationTime="Report" pattern="MM/dd/yyyy" isBlankWhenNull="false">
+				<reportElement key="textField" x="374" y="55" width="124" height="25" uuid="6b3ecb50-8622-46c5-a8ff-3d2ecaf6f6c9"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-26" x="65" y="66" width="237" height="13" uuid="666e9378-288d-48a3-8ed0-7894f2402041"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Library_Address_Line4_C}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Prevent"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="131" splitType="Stretch">
+			<staticText>
+				<reportElement key="staticText-45" stretchType="RelativeToTallestObject" x="65" y="1" width="70" height="13" uuid="0e10d303-86e1-4d6d-93de-0e9ba5640a80"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[INV #:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-49" stretchType="RelativeToTallestObject" x="65" y="79" width="66" height="13" uuid="4c0a6b76-bd98-49f3-a574-96d2048a5de8"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left">
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[BARCODE:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-59" positionType="Float" x="384" y="105" width="94" height="13" isRemoveLineWhenBlank="true" uuid="aa248585-694e-492b-9087-bc234a1fba5b"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Bill_Amount}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-49" x="135" y="40" width="292" height="13" uuid="59604c7b-0fb3-4bf8-a55d-dbf7e377863a"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Item_Title}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-46" stretchType="RelativeToTallestObject" x="65" y="27" width="70" height="13" uuid="a9372593-2233-45e3-bd03-d6c17e3edad4"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[AUTHOR:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-50" x="135" y="53" width="168" height="13" uuid="eab52f6b-49df-49c4-a7ba-a7b22f7b5012"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Item_Call_Number}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-48" x="135" y="27" width="292" height="13" uuid="4cb86abc-9508-4baa-8b0c-c052ce444393"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Item_Author}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-52" stretchType="RelativeToTallestObject" x="65" y="92" width="106" height="13" uuid="5892a57c-b056-492b-95a8-b29527845da2"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Date Checked Out:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-54" x="171" y="92" width="131" height="13" uuid="5a7abf76-408c-417b-b3a0-dbfe3972b5a9"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Bill_Item_Checked_Out_Date}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-51" x="134" y="79" width="155" height="13" uuid="4264ffe3-fb85-4b18-818c-d14c62ff378e"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Item_Barcode}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-53" x="171" y="105" width="131" height="13" uuid="90610010-5b3d-410e-9362-8fe7893fd374"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Bill_Item_Date_Due}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-51" stretchType="RelativeToTallestObject" x="65" y="105" width="70" height="13" uuid="a577698b-b752-4c9d-8523-26e0ca3e7fc0"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Date Due: ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-48" stretchType="RelativeToTallestObject" x="65" y="53" width="70" height="13" uuid="1a1fa772-9ddb-47d4-aeb7-7d40e0197464"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[CALL #:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-58" positionType="Float" x="310" y="105" width="71" height="13" isRemoveLineWhenBlank="true" uuid="65de7f0e-daa1-4953-a0b8-1c59ff99c525"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ITEM TOTAL: ]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-40" x="135" y="1" width="85" height="13" uuid="b07cc42e-3660-4b36-8883-dfb7312325bf"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Bill_Invoice}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-47" stretchType="RelativeToTallestObject" x="65" y="40" width="70" height="13" uuid="f710bbe2-e7bd-43d6-9ca1-6fa9f87f1653"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[TITLE:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-47" x="135" y="14" width="125" height="13" uuid="9fbef4c7-50da-4b4a-bdd5-85083ac967e7"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Bill_Charge_Type}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-48" stretchType="RelativeToTallestObject" x="65" y="66" width="70" height="13" uuid="5cf638a5-5a02-480d-b71d-087eb00aa086"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left">
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[VOLUME:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-50" x="135" y="66" width="168" height="13" uuid="65691ace-a435-4d03-bbed-ee444ee6c555"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Item_Volume}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-45" stretchType="RelativeToTallestObject" x="65" y="14" width="70" height="13" uuid="edd7ab10-e6e3-4a73-bafb-d22393176832"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[Charge Type:]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Prevent"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Prevent"/>
+	</pageFooter>
+	<summary>
+		<band height="35" splitType="Stretch">
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-39" x="0" y="21" width="30" height="13" uuid="6fb4f5ea-4a5e-4ffb-94f9-c8aaa1eff40f"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Text_Number_C}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-60" x="384" y="5" width="159" height="13" uuid="af8ba0bf-8ebd-494f-89d8-0885c0b2fde3"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Bill_Total_Patron_Fines_C}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-59" x="261" y="5" width="120" height="13" uuid="483ef726-e8a2-4e91-886e-89d9e41c5678"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total Outstanding Fees:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-39" x="44" y="21" width="30" height="13" uuid="0819e2cd-20b6-4da5-a003-3bdcef799857"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Print_Sequence_C}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-45" stretchType="RelativeToTallestObject" x="30" y="21" width="14" height="13" uuid="5d4ce253-e3e1-4c07-9058-5ed4d022d155"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>
